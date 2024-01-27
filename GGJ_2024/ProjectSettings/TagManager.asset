@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Effects
+    uniqueID: 1687035247
+    locked: 0
+  - name: Onomatopeias
+    uniqueID: 1385713301
+    locked: 0
+  - name: UI
+    uniqueID: 734654459
+    locked: 0
