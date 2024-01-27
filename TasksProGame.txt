@@ -1,19 +1,28 @@
-TASKS PRA FAZER NO GAME
+TASKS PRA FAZER NO GAME (Klunk Delivery)
 
 -- Systems
 ---> AudioManager = com Sounds em SO
 ---> MenuManager = Responsável pelo controle de Flow do Menu (Se tiver)
 ---> InputManager = Responsável pelo controle de Input do proprio jogador
+---> GameManager = Responsável pela lógica básica de Carregar, Pausar, Quitar do Jogo Principal 
+---> StateMachine (Ou StateActions) = Responsável por controlar os Estados de X do Jogo Principal
+(Pode ser a própria GameManager que fique responsável por essa troca de Estados)
 
 -- Utilities
 ---> ScreenToWorldPosition
 ---> CinemachineManager => responsável pelo controle de cameras (se tiver)
 ----- 
 
+-- Player
+---> Mecanica 2D de MOvimento Desengonçada
+----> ClunkyMovement = Movimento procedural que o jogador controla a partir dos Joints das pernas do Jogador
+----> ClunkyBalanceControl = Controla os braços do Jogador 
+----> PlateController = Prato em que o Jogador carrega os items que precisam ser entregues
+----> ItemController = 
 
 -- UI Tween Utilities
 ---> UI Fade - Dá fade em uma imagem
 ---> UI PopUp = Dá Pop numa imagem
 ---> UI Move
----> GameManager -> Responsável pela lógica básica de Carregar, Quitar, Pausar 
+
 
