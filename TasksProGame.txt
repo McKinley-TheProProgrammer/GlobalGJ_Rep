@@ -1,0 +1,19 @@
+TASKS PRA FAZER NO GAME
+
+-- Systems
+---> AudioManager = com Sounds em SO
+---> MenuManager = Responsável pelo controle de Flow do Menu (Se tiver)
+---> InputManager = Responsável pelo controle de Input do proprio jogador
+
+-- Utilities
+---> ScreenToWorldPosition
+---> CinemachineManager => responsável pelo controle de cameras (se tiver)
+----- 
+
+
+-- UI Tween Utilities
+---> UI Fade - Dá fade em uma imagem
+---> UI PopUp = Dá Pop numa imagem
+---> UI Move
+---> GameManager -> Responsável pela lógica básica de Carregar, Quitar, Pausar 
+
