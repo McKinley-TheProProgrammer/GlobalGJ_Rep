@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 
 public class KlunkyMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody2D _rb;
+    private float moveSpeed = 30;
+    
+    [SerializeField] 
+    private Transform feetPos;
+    
+    [ReadOnly]
+    public bool isGrounded;
     void Start()
     {
         
