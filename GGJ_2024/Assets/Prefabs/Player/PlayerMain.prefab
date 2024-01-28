@@ -2307,6 +2307,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isGrounded: 0
+  collectablesFound:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 1fe8c6cee1dbc4f4aad0006fb6c0dd13, type: 2}
+    _variableInstancer: {fileID: 0}
+  goalReached:
+    _usage: 2
+    _value: 0
+    _constant: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 91b092be4f7715d47864fc9f1f5567b4, type: 2}
+    _variableInstancer: {fileID: 0}
 --- !u!114 &5215014337662020538
 MonoBehaviour:
   m_ObjectHideFlags: 0
