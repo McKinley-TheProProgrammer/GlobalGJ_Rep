@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] 
     private Canvas retryCanvas;
     
-    
     [SerializeField] 
     private BoolVariable gameStarted;
 
@@ -24,16 +23,18 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] 
     private BoolVariable goalReached;
+
+    private Vector2 playerStartPos;
+    [SerializeField] private Transform mainPlayer;
+
+    [SerializeField]
+    private List<CollectableGeneric> _collectableGenerics;
     
-    public void StartGame()
-    {
-        InputManager.Instance.Pause = false;
-    }
-
-
     private void Start()
     {
+        playerStartPos = mainPlayer.position;
         StartCoroutine(CheckEndGame());
+        
     }
 
     IEnumerator CheckEndGame()
@@ -44,14 +45,23 @@ public class GameManager : MonoBehaviour
         InputManager.Instance.Pause = true;
         
     }
-
+    
+    public void StartGame()
+    {
+        InputManager.Instance.Pause = false;
+    }
+    
     public void EndGame()
     {
-        
+        retryCanvas.gameObject.SetActive(false);
         gameStarted.Value = false;
         numberOfCollectables.Value = 0;
         goalReached.Value = false;
+
+        InputManager.Instance.Pause = false;
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        mainPlayer.position = playerStartPos;
+        _collectableGenerics.ForEach(x => x.gameObject.SetActive(true));
+        StartCoroutine(CheckEndGame());
     }
 }

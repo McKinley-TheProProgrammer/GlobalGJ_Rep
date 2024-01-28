@@ -31,7 +31,8 @@ public class InputManager : SingletonGlobal<InputManager>
         
         movementActions = PlayerControls.Movement;
 
-        mainBrain = GameObject.FindWithTag("MainCamera").GetComponent<CinemachineBrain>();
+        if(!mainBrain)
+            mainBrain = GameObject.FindWithTag("MainCamera").GetComponent<CinemachineBrain>();
        
     }
 
@@ -47,7 +48,8 @@ public class InputManager : SingletonGlobal<InputManager>
     
     private void Start()
     {
-        mainBrain = GameObject.FindWithTag("MainCamera").GetComponent<CinemachineBrain>();
+        if(!mainBrain)
+            mainBrain = GameObject.FindWithTag("MainCamera").GetComponent<CinemachineBrain>();
     }
 
     private void Update()

@@ -17,13 +17,13 @@ public class PlayerBoneTrigger : MonoBehaviour
         if (other.CompareTag("Collectable"))
         {
             collectablesFound.Value += 1;
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
 
         if (other.CompareTag("Goal"))
         {
             goalReached.Value = true;
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
     }
 }
