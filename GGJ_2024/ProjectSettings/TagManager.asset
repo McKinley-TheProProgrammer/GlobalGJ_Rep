@@ -41,15 +41,36 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: cenario_bg
+    uniqueID: 3507652709
+    locked: 0
+  - name: cenario_notvisible
+    uniqueID: 1223427441
+    locked: 0
+  - name: cenario_01
+    uniqueID: 129007247
+    locked: 0
+  - name: cenario_02
+    uniqueID: 1687035247
+    locked: 0
+  - name: cenario_03
+    uniqueID: 3842409523
+    locked: 0
+  - name: cenario_04
+    uniqueID: 441226287
+    locked: 0
+  - name: cenario_05
+    uniqueID: 3757109099
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Effects
-    uniqueID: 1687035247
     locked: 0
   - name: Onomatopeias
     uniqueID: 1385713301
     locked: 0
   - name: UI
     uniqueID: 734654459
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 164108703
     locked: 0
