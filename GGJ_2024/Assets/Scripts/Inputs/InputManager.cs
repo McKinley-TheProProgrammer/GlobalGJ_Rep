@@ -16,7 +16,9 @@ public class InputManager : SingletonGlobal<InputManager>
     private PlayerControls.MovementActions movementActions;
     public InputAction MoveAction => movementActions.Move;
     public InputAction JumpAction => movementActions.Jump;
+    public InputAction MouseLeftBtnAction => movementActions.MouseLeftPress;
     public Vector3 MousePosition => CamUtils.ScreenToWorldPosition(mainBrain,movementActions.CursorPosition.ReadValue<Vector2>());
+    
     protected override void Awake()
     {
         base.Awake();

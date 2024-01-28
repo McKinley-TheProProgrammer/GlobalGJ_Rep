@@ -53,6 +53,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseLeftPress"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""cd2d7dc2-c63b-45b8-8a2e-e4e2a7b24a08"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -143,6 +152,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2e2ec2c-72e6-4d53-bbb2-f0b178cd6d91"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseLeftPress"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -154,6 +174,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Movement_Move = m_Movement.FindAction("Move", throwIfNotFound: true);
         m_Movement_CursorPosition = m_Movement.FindAction("CursorPosition", throwIfNotFound: true);
         m_Movement_Jump = m_Movement.FindAction("Jump", throwIfNotFound: true);
+        m_Movement_MouseLeftPress = m_Movement.FindAction("MouseLeftPress", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -218,6 +239,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Movement_Move;
     private readonly InputAction m_Movement_CursorPosition;
     private readonly InputAction m_Movement_Jump;
+    private readonly InputAction m_Movement_MouseLeftPress;
     public struct MovementActions
     {
         private @PlayerControls m_Wrapper;
@@ -225,6 +247,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Movement_Move;
         public InputAction @CursorPosition => m_Wrapper.m_Movement_CursorPosition;
         public InputAction @Jump => m_Wrapper.m_Movement_Jump;
+        public InputAction @MouseLeftPress => m_Wrapper.m_Movement_MouseLeftPress;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -243,6 +266,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @MouseLeftPress.started += instance.OnMouseLeftPress;
+            @MouseLeftPress.performed += instance.OnMouseLeftPress;
+            @MouseLeftPress.canceled += instance.OnMouseLeftPress;
         }
 
         private void UnregisterCallbacks(IMovementActions instance)
@@ -256,6 +282,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @MouseLeftPress.started -= instance.OnMouseLeftPress;
+            @MouseLeftPress.performed -= instance.OnMouseLeftPress;
+            @MouseLeftPress.canceled -= instance.OnMouseLeftPress;
         }
 
         public void RemoveCallbacks(IMovementActions instance)
@@ -278,5 +307,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnCursorPosition(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnMouseLeftPress(InputAction.CallbackContext context);
     }
 }
