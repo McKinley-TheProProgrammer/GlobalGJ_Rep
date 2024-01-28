@@ -1,25 +1,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class InputManager : SingletonGlobal<InputManager>
 {
-    public PlayerInput playerInput;
+    [SerializeField] 
+    public CinemachineBrain mainBrain;
     
+    public PlayerInput playerInput;
     public PlayerControls PlayerControls { get; private set; }
     
     private PlayerControls.MovementActions movementActions;
     public InputAction MoveAction => movementActions.Move;
     public InputAction JumpAction => movementActions.Jump;
-    
+    public Vector3 MousePosition => CamUtils.ScreenToWorldPosition(mainBrain,movementActions.CursorPosition.ReadValue<Vector2>());
     protected override void Awake()
     {
         base.Awake();
         PlayerControls = new PlayerControls();
-
+        
         movementActions = PlayerControls.Movement;
+
+        mainBrain = GameObject.FindWithTag("MainCamera").GetComponent<CinemachineBrain>();
     }
 
     private void OnEnable()

@@ -874,15 +874,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3884905833193469008, guid: cc005295e8a926c41b1a1e3c7d05f4b7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 261.059
+      value: 227.7886
       objectReference: {fileID: 0}
     - target: {fileID: 3884905833193469008, guid: cc005295e8a926c41b1a1e3c7d05f4b7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 130.1884
+      value: 105.512
       objectReference: {fileID: 0}
     - target: {fileID: 3884905833193469008, guid: cc005295e8a926c41b1a1e3c7d05f4b7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 109
+      value: 102.92936
       objectReference: {fileID: 0}
     - target: {fileID: 3884905833193469008, guid: cc005295e8a926c41b1a1e3c7d05f4b7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -989,6 +989,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4060105594034095237, guid: 37b1c4edb67fcd84db72d963818867a9, type: 3}
+      propertyPath: mainBrain
+      value: 
+      objectReference: {fileID: 519420033}
     - target: {fileID: 4060105594034095237, guid: 37b1c4edb67fcd84db72d963818867a9, type: 3}
       propertyPath: playerInput
       value: 

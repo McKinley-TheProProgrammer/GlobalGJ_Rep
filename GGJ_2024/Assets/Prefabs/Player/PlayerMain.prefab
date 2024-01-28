@@ -2042,7 +2042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 6214951930210281150}
   moveSpeed: 400
-  jumpForce: 200
+  jumpForce: 350
   feetPos:
   - {fileID: 2141263234705206710}
   - {fileID: 7452088550146178073}
@@ -2053,8 +2053,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isGrounded: 0
-  footR: {fileID: 637208441857109998}
-  footL: {fileID: 5122486826185539772}
 --- !u!114 &5215014337662020538
 MonoBehaviour:
   m_ObjectHideFlags: 0
