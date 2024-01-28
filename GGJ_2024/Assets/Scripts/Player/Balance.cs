@@ -8,6 +8,6 @@ public class Balance : MonoBehaviour
 
     private void Update()
     {
-        rb.MoveRotation(Mathf.Lerp(rb.rotation,targetRotation,force * Time.fixedDeltaTime));
+        rb.MoveRotation(Mathf.LerpAngle(rb.rotation,targetRotation,force * Time.fixedDeltaTime));
     }
 }

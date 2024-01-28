@@ -10,8 +10,10 @@ public class InputManager : SingletonGlobal<InputManager>
     
     public PlayerControls PlayerControls { get; private set; }
     
-    public PlayerControls.MovementActions movementActions;
-
+    private PlayerControls.MovementActions movementActions;
+    public InputAction MoveAction => movementActions.Move;
+    public InputAction JumpAction => movementActions.Jump;
+    
     protected override void Awake()
     {
         base.Awake();
@@ -29,5 +31,7 @@ public class InputManager : SingletonGlobal<InputManager>
     {
         PlayerControls.Disable();
     }
-    
+
+   
+
 }
