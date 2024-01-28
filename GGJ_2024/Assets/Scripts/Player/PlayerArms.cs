@@ -37,7 +37,6 @@ public class PlayerArms : MonoBehaviour
         
         if (mouseAction.IsPressed())
         {
-            Debug.Log(rotationZ,this);
             rb.MoveRotation(Mathf.LerpAngle(rb.rotation,rotationZ,speed * Time.fixedDeltaTime));
         }
     }

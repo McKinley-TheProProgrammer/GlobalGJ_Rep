@@ -27,6 +27,7 @@ public class MenuManager : MonoBehaviour
         yield return new WaitUntil(() => InputManager.Instance.MouseLeftBtnAction.triggered);
         PlayTimeline();
         InputManager.Instance.Pause = true;
+        
     }
 
     public void RemoteUp()
@@ -38,6 +39,11 @@ public class MenuManager : MonoBehaviour
         remoteTransform.DOAnchorPos(Vector2.down * 200, .7f);
     }
 
+    public void UnpauseInputManager()
+    {
+        InputManager.Instance.Pause = false;
+    }
+    
     public void PlayTimeline()
     {
         _timelineAsset.Play();
