@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
     [SerializeField]
     private InputManager _inputManager;
+    
+    [SerializeField] 
+    private CrowdController _crowdController;
+    
     
     void Start()
     {
