@@ -20,11 +20,22 @@ public class MenuManager : MonoBehaviour
     private RectTransform remoteTransform;
     private IEnumerator Start()
     {
-        remoteTransform.DOAnchorPos(Vector2.zero, .7f).From(Vector2.down * -200);
+        yield return new WaitForSeconds(.1f);
+        RemoteUp();
         yield return new WaitForSeconds(1f);
 
         yield return new WaitUntil(() => InputManager.Instance.MouseLeftBtnAction.triggered);
         PlayTimeline();
+        InputManager.Instance.Pause = true;
+    }
+
+    public void RemoteUp()
+    {
+        remoteTransform.DOAnchorPos(Vector2.zero, .7f).From(Vector2.down * 150);
+    }
+    public void RemoteBack()
+    {
+        remoteTransform.DOAnchorPos(Vector2.down * 200, .7f);
     }
 
     public void PlayTimeline()

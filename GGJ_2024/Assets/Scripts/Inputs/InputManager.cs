@@ -18,7 +18,12 @@ public class InputManager : SingletonGlobal<InputManager>
     public InputAction JumpAction => movementActions.Jump;
     public InputAction MouseLeftBtnAction => movementActions.MouseLeftPress;
     public Vector3 MousePosition => CamUtils.ScreenToWorldPosition(mainBrain,movementActions.CursorPosition.ReadValue<Vector2>());
-    
+
+    public bool Pause { get; set; }
+
+    public void PPause() => Pause = true;
+    public void Unpause() => Pause = false;
+
     protected override void Awake()
     {
         base.Awake();
@@ -39,6 +44,15 @@ public class InputManager : SingletonGlobal<InputManager>
         PlayerControls.Disable();
     }
 
-   
-
+    private void Update()
+    {
+        if (Pause)
+        {
+            PlayerControls.Disable();
+        }
+        else if (!Pause)
+        {
+            PlayerControls.Enable();
+        }
+    }
 }

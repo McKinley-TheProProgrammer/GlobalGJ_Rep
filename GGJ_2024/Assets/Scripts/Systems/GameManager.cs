@@ -17,12 +17,11 @@ public class GameManager : MonoBehaviour
     
     public void StartGame()
     {
-        _inputManager.enabled = true;
-        
+        _inputManager.Pause = false;
+
     }
     // Update is called once per frame
     void Update()
     {
-        _inputManager.enabled = gameStarted.Value;
     }
 }
