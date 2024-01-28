@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Goal
   - Grabbable
+  - Collectable
   layers:
   - Default
   - TransparentFX

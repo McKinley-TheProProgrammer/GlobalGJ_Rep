@@ -1,5 +1,6 @@
 using System;
 using Unity.Collections;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -23,6 +24,11 @@ public class PlayerController : MonoBehaviour
     [ReadOnly]
     public bool isGrounded;
 
+    [SerializeField] 
+    private IntReference collectablesFound;
+    [SerializeField] 
+    private BoolReference goalReached;
+    
     void Start()
     {
         _animator = GetComponent<Animator>();
@@ -84,5 +90,20 @@ public class PlayerController : MonoBehaviour
             Gizmos.DrawWireSphere(feet.position,feetRadius);
         }
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Collectable"))
+        {
+            collectablesFound.Value += 1;
+            Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Goal"))
+        {
+            goalReached.Value = true;
+            Destroy(other.gameObject);
+        }
     }
 }

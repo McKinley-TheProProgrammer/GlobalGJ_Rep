@@ -20,8 +20,7 @@ public class GameManager : MonoBehaviour
         _inputManager.Pause = false;
 
     }
-    // Update is called once per frame
-    void Update()
-    {
-    }
+    
+    
+    
 }
