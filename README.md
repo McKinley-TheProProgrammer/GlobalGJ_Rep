@@ -21,7 +21,7 @@ Samuel Azeredo (Game Artist/ Level Design):
 https://eujota.itch.io
 https://www.artstation.com/samuelazeredo
 
-JoÃ£o Vitor Opinguim10 (Game Design / Level Design)
+João Vitor Opinguim10 (Game Design / Level Design)
 My twitch: https://www.twitch.tv/opinguim10
 My team itch: https://instalentretenimento.itch.io/
 My own itch: https://opinguim10.itch.io/
