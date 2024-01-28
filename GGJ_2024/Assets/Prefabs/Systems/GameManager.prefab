@@ -472,5 +472,31 @@ MonoBehaviour:
     _constant: {fileID: 0}
     _variable: {fileID: 11400000, guid: 1fe8c6cee1dbc4f4aad0006fb6c0dd13, type: 2}
     _variableInstancer: {fileID: 0}
-  maxCollectables: 11
+  maxCollectables: 24
   goalReached: {fileID: 11400000, guid: 91b092be4f7715d47864fc9f1f5567b4, type: 2}
+  mainPlayer: {fileID: 0}
+  _collectableGenerics:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

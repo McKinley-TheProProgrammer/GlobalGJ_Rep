@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityAtoms.BaseAtoms;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -37,6 +38,14 @@ public class GameManager : MonoBehaviour
         
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     IEnumerator CheckEndGame()
     {
         yield return new WaitUntil(() => goalReached.Value || numberOfCollectables.Value >= maxCollectables);
@@ -64,4 +73,5 @@ public class GameManager : MonoBehaviour
         _collectableGenerics.ForEach(x => x.gameObject.SetActive(true));
         StartCoroutine(CheckEndGame());
     }
+    
 }
