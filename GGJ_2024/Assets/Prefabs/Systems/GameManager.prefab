@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 262153647}
   - component: {fileID: 262153646}
   - component: {fileID: 262153645}
+  - component: {fileID: 1907034860277573307}
   m_Layer: 5
   m_Name: RetryGame
   m_TagString: Untagged
@@ -122,6 +123,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1907034860277573307}
+        m_TargetAssemblyTypeName: UIGenericPop, Assembly-CSharp
+        m_MethodName: PopIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1751417144707112736}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: EndGame
@@ -134,6 +147,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1907034860277573307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262153643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33d3c1e99bcfa947b5ff873e4798a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransformToPop: {fileID: 262153644}
+  popFactor:
+    _usage: 0
+    _value: 2
+    _constant: {fileID: 0}
+    _variable: {fileID: 0}
+    _variableInstancer: {fileID: 0}
+  popDuration: 0.1
+  loop: 1
+  debugInfo: 0
 --- !u!1 &477566047
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e93d2b2a8da954389bd0d8f41537b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputManager: {fileID: 0}
   _crowdController: {fileID: 0}
   retryCanvas: {fileID: 477566051}
   gameStarted: {fileID: 11400000, guid: bb2d52023c30ea04281752ce5c5656e8, type: 2}

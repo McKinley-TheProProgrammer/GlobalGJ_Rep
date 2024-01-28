@@ -32,6 +32,7 @@ public class InputManager : SingletonGlobal<InputManager>
         movementActions = PlayerControls.Movement;
 
         mainBrain = GameObject.FindWithTag("MainCamera").GetComponent<CinemachineBrain>();
+       
     }
 
     private void OnEnable()
@@ -42,6 +43,11 @@ public class InputManager : SingletonGlobal<InputManager>
     private void OnDisable()
     {
         PlayerControls.Disable();
+    }
+    
+    private void Start()
+    {
+        mainBrain = GameObject.FindWithTag("MainCamera").GetComponent<CinemachineBrain>();
     }
 
     private void Update()

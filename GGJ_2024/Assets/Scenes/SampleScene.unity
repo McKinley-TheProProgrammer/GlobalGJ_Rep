@@ -651,6 +651,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7164387487575689954, guid: 68e385413e5ca754cb6f11b54272acaa, type: 3}
+      propertyPath: _unityEventResponse.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164387487575689954, guid: 68e385413e5ca754cb6f11b54272acaa, type: 3}
+      propertyPath: _unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164387487575689954, guid: 68e385413e5ca754cb6f11b54272acaa, type: 3}
+      propertyPath: _unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1426239050}
+    - target: {fileID: 7164387487575689954, guid: 68e385413e5ca754cb6f11b54272acaa, type: 3}
+      propertyPath: _unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164387487575689954, guid: 68e385413e5ca754cb6f11b54272acaa, type: 3}
+      propertyPath: _unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164387487575689954, guid: 68e385413e5ca754cb6f11b54272acaa, type: 3}
+      propertyPath: _unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164387487575689954, guid: 68e385413e5ca754cb6f11b54272acaa, type: 3}
+      propertyPath: _unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 06b0e08f432f29f46bfe6a9fd2b39a04, type: 2}
+    - target: {fileID: 7164387487575689954, guid: 68e385413e5ca754cb6f11b54272acaa, type: 3}
+      propertyPath: _unityEventResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Sound, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68e385413e5ca754cb6f11b54272acaa, type: 3}
 --- !u!1001 &869684127
@@ -777,6 +809,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 394983905708042964, guid: 6a796ca852113f447929b1b288441d53, type: 3}
   m_PrefabInstance: {fileID: 1117905834}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1426239050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4538091088841283664, guid: cc55a8e33fa00974eae657034ace67a3, type: 3}
+  m_PrefabInstance: {fileID: 5527314967513188725}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd870009f0e7284da17d86910dba64d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1541400349 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 389820788, guid: cc005295e8a926c41b1a1e3c7d05f4b7, type: 3}
