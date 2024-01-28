@@ -7,9 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
-    private InputManager _inputManager;
-    
     [SerializeField] 
     private CrowdController _crowdController;
     [SerializeField] 
@@ -30,7 +27,7 @@ public class GameManager : MonoBehaviour
     
     public void StartGame()
     {
-        _inputManager.Pause = false;
+        InputManager.Instance.Pause = false;
     }
 
 
@@ -44,12 +41,13 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => goalReached.Value || numberOfCollectables.Value >= maxCollectables);
         Debug.Log("You Win!");
         retryCanvas.gameObject.SetActive(true);
+        InputManager.Instance.Pause = true;
         
     }
 
     public void EndGame()
     {
-        _inputManager.Pause = true;
+        
         gameStarted.Value = false;
         numberOfCollectables.Value = 0;
         goalReached.Value = false;
